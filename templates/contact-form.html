@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f2f2f2;
+      }
+
+      .container {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+
+      .header {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      .header h1 {
+        color: #333;
+        font-size: 24px;
+        margin: 0;
+      }
+
+      .content {
+        margin-bottom: 30px;
+      }
+
+      .content p {
+        margin: 0 0 10px;
+        line-height: 1.5;
+      }
+
+      .services {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+
+      .footer {
+        text-align: center;
+      }
+
+      .footer p {
+        color: #999;
+        font-size: 14px;
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>Contact Form</h1>
+      </div>
+      <div class="content">
+        <p>Name: {{data.name}}</p>
+        <p>Email: {{data.email}}</p>
+        <p>Project Details: {{data.details}}</p>
+        <div class="services">
+          {{#if data.design}}
+          <p>Design &#x2705;</p>
+          {{else}}
+          <p>Design &#10060;</p>
+          {{/if}} {{#if data.branding}}
+          <p>Branding & SEO &#x2705;</p>
+          {{else}}
+          <p>Branding & SEO &#10060;</p>
+          {{/if}} {{#if data.web_dev}}
+          <p>Web Development &#x2705;</p>
+          {{else}}
+          <p>Web Development &#10060;</p>
+          {{/if}} {{#if data.other}}
+          <p>Other &#x2705;</p>
+          {{else}}
+          <p>Other &#10060;</p>
+          {{/if}}
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
